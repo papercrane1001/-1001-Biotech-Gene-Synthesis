@@ -10,7 +10,7 @@ using Verse;
 
 namespace BiotechGeneSynthesis
 {
-    class Dialog_SynthesizeGenepack : Window
+    public class Dialog_SynthesizeGenepack : Window
     {
         public ThingFilterUI.UIState uiState = new ThingFilterUI.UIState();
         private Vector2 scrollPosition;
