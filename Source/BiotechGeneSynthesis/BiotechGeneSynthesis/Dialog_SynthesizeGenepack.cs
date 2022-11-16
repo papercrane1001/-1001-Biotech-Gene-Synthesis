@@ -24,8 +24,22 @@ namespace BiotechGeneSynthesis
 
         public override void DoWindowContents(Rect inRect)
         {
+            forcePause = true;
+            doCloseX = true;
+            doCloseButton = true;
+            closeOnClickedOutside = false;
+            absorbInputAroundWindow = true;
+
             //throw new NotImplementedException();
             //Rect rect = new Rect()
+            if(genepackGlobalFilter == null)
+            {
+                genepackGlobalFilter = new ThingFilter();
+                genepackGlobalFilter.SetAllow(ThingDefOf.Genepack, allow: true);
+            }
+
+
+
 
         }
     }
