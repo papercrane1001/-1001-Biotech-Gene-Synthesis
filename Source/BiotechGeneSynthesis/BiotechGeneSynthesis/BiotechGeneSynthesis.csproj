@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]Biotech Gene Synthesis\Assemblies</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GeneticRim">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2801160906\1.4\Assemblies\GeneticRim.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2023507013\1.4\Assemblies\VFECore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
