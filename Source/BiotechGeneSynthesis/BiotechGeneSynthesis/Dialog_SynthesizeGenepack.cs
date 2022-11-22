@@ -10,7 +10,7 @@ using Verse;
 
 namespace BiotechGeneSynthesis
 {
-    public class Dialog_SynthesizeGenepack : Window
+    public class Dialog_SynthesizeGenepack : GeneCreationDialogBase
     {
         public ThingFilterUI.UIState uiState = new ThingFilterUI.UIState();
         private Vector2 scrollPosition;
@@ -18,9 +18,15 @@ namespace BiotechGeneSynthesis
         public const float TopButtonHeight = 35f;
         public const float TopButtonWidth = 150f;
 
-        private static ThingFilter genepackGlobalFilter;
+        //private static ThingFilter genepackGlobalFilter;
 
-        public override Vector2 InitialSize => new Vector2(700f, 700f);
+        public override Vector2 InitialSize
+        {
+            get
+            {
+                return new Vector2((float)Mathf.Min(UI.screenWidth, 1036), (float)(UI.screenHeight - 4));
+            }
+        } 
 
         public override void DoWindowContents(Rect inRect)
         {
@@ -32,11 +38,11 @@ namespace BiotechGeneSynthesis
 
             //throw new NotImplementedException();
             //Rect rect = new Rect()
-            if(genepackGlobalFilter == null)
-            {
-                genepackGlobalFilter = new ThingFilter();
-                genepackGlobalFilter.SetAllow(ThingDefOf.Genepack, allow: true);
-            }
+            //if(genepackGlobalFilter == null)
+            //{
+            //    genepackGlobalFilter = new ThingFilter();
+            //    genepackGlobalFilter.SetAllow(ThingDefOf.Genepack, allow: true);
+            //}
 
 
 
